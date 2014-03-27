@@ -4,6 +4,20 @@ title: "Coursehacker's Class Blog"
 ---
 
 <div id="home">
+    <table>
+    <thead class="posts">
+    <tr>
+        <th>
+            Date
+        </th>
+        <th>
+            Post
+        </th>
+        <th>
+            Author(s)
+        </th>
+        </tr>
+        </thead>
       <tbody class="posts">
     {% for post in site.posts %}
       {% assign print = "true" %}
@@ -19,7 +33,7 @@ title: "Coursehacker's Class Blog"
             <strong>
       	  {% endif %}
 	    {% endfor %}
-        <td><strong><span>{{ post.date | date_to_string }}</span> </strong> </td><td><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> by 
+        <td><strong><span>{{ post.date | date_to_string }}</span> </strong> </td><td><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </td><td> 
 		{% assign authorCount = post.author | size %}
 		{% if authorCount == 0 %}
 		{% elsif authorCount == 1 %}
@@ -41,4 +55,5 @@ title: "Coursehacker's Class Blog"
     {% endif %}
     {% endfor %}
   </tbody>
+  </table>
 </div>
