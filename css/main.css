@@ -15,7 +15,7 @@ html, body { height: 100%;
 
 body {
   background-color: #FFFFFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  font: 0.834em Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
 }
@@ -52,11 +52,11 @@ ul.posts {
   margin-bottom: 2em;
 }
 
-ul.posts li {
+table.posts tr {
   line-height: 1.75em;
 }
 
-ul.posts span {
+tbody.posts span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
