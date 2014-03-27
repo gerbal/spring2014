@@ -4,8 +4,7 @@ title: "Coursehacker's Class Blog"
 ---
 
 <div id="home">
-  <ul class="posts">
-      <tbody>
+      <tbody class="posts">
     {% for post in site.posts %}
       {% assign print = "true" %}
       {% for category in site.special-categories %}
@@ -41,5 +40,5 @@ title: "Coursehacker's Class Blog"
 </tr>
     {% endif %}
     {% endfor %}
-  </ul>
+  </tbody>
 </div>
