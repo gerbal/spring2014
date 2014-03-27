@@ -47,9 +47,10 @@ ul {
 /* Home
 /*
 /*****************************************************************************/
-ul.posts {
-  list-style-type: none;
+table.posts {
   margin-bottom: 2em;
+  width: 100%;
+    border-collapse: collapse;
 }
 
 table.posts tr {
