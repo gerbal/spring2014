@@ -33,7 +33,9 @@ title: "Coursehacker's Class Blog"
             <strong>
       	  {% endif %}
 	    {% endfor %}
-        <td><strong><span>{{ post.date | date_to_string }}</span> </strong> </td><td><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </td><td> 
+        <td><strong><span>{{ post.date | date_to_string }} </span> </strong> </td>
+        
+        <td> 
 		{% assign authorCount = post.author | size %}
 		{% if authorCount == 0 %}
 		{% elsif authorCount == 1 %}
@@ -43,8 +45,10 @@ title: "Coursehacker's Class Blog"
               {{ authored.name }}{% elsif forloop.last %}
               {% assign authored = site.authors[authors] %}
               and {{ authored.name }}{% else %}{% assign authored = site.authors[authors] %}, {{ authored.name }}{% endif %}{% endfor %}
-		{% endif %}
+		{% endif %} 
       </td>
+                
+        <td><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </td>
 	
       {% for authors in post.author %}
       		{% if {{site.authors[authors].prof}} == true %}
